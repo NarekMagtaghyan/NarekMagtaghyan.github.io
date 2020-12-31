@@ -1,0 +1,33 @@
+.products
+    &-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        row-gap: 40px
+        margin-top: 40px
+.product
+    text-align: center
+    font-size: 14px
+    &-link
+        display: inline-block
+        text-decoration: none
+        transition: 0.2s all
+        &:hover
+            opacity: 0.8
+    &__img
+        display: block
+    &__title
+        margin: 12px 0 0 0
+        font-family: "Playfair Display", serif
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        color: #000000
+    &__price
+        margin-top: 12px
+        &-old
+            color: #999999
+            margin-right: 10px
+        &-new
+            font-weight: bold
+            color: #F72464
