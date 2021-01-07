@@ -1,0 +1,46 @@
+.menu-icon
+    position: relative
+    width: 30px
+    height: 5px
+    background-color: #000000
+    &-wrapper
+        width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 99
+    &::before
+        position: absolute
+        left: 0
+        top: -10px
+        content: ''
+        width: 30px
+        height: 5px
+        background-color: #000000
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+    &::after
+        position: absolute
+        left: 0
+        top: 10px
+        content: ''
+        width: 30px
+        height: 5px
+        background-color: #000000
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+
+    &.menu-icon-active
+        background-color: transparent
+        &::before
+          transform: rotate(45deg)
+          top: 0
+          transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+        &::after
+          transform: rotate(-45deg)
+          top: 0
+          transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+
+/* Для Десктопа */
+@media (min-width: 992px)
+    .menu-icon-wrapper
+        display: none
