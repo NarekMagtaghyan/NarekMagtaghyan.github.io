@@ -15,6 +15,7 @@
     display: flex
     justify-content: space-between
     flex-grow: 10
+    column-gap: 20px
     &__content
         max-width: 360px
         display: flex
@@ -55,3 +56,23 @@
             transition: 0.2s all
         &:hover::after
             margin-left: 8px
+
+/* For mobile */
+@media (max-width: 992px)
+    .blog-section
+        padding-top: 40px
+        padding-bottom: 20px
+        
+    .posts-wrapper
+        margin-top: 43px
+        margin-bottom: 38px
+        justify-content: center
+
+@media (max-width: 576px)
+    .post
+        align-items: center
+        flex-direction: column
+        text-align: center
+        &__content
+            max-width: 280px
+            margin-top: 15px

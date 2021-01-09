@@ -21,9 +21,22 @@
         position: relative
         display: flex
         justify-content: space-between
+        flex-direction: row
     &__title
         margin: 0
         font-family: "Playfair Display", serif
         color: #FFFFFF
         font-size: 52px
         font-weight: normal
+
+/* For mobile */
+@media (max-width: 992px)
+    .info-section
+        padding: 34px 0
+        text-align: center
+        &__title
+            font-size: 32px
+            margin-bottom: 20px
+        &__row
+            flex-direction: column
+            align-items: center
